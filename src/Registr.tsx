@@ -12,7 +12,7 @@ export default function Registr(): JSX.Element {
 
   const [inputs, setInputs] = useState({ name: '', class: '', gender: '', biography: '' });
 
-  const submitHandler = async (event: any): Promise<void> => {
+  const submitHandler = async (): Promise<void> => {
     const response = await axios.post('/registr', inputs);
 
     if (response.status === 200) {
