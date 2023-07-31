@@ -9,7 +9,7 @@ type OneRaceProps = {
 };
 
 
-export default function OneRaceCard(): JSX.Element | void {
+export default function OneRaceCard(): JSX.Element {
 
 
   function getRaceImage(name: string): string {
