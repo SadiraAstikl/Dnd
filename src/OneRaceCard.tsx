@@ -4,15 +4,15 @@ import { Button, Card } from 'react-bootstrap';
 import type { DescriptionType } from './types/races';
 
 
-type OneRaceProps = {
-  race: DescriptionType;
-};
+// type OneRaceProps = {
+//   race: DescriptionType;
+// };
 
 
 export default function OneRaceCard(): JSX.Element {
 
 
-  function getRaceImage(name: string): string {
+  function getRaceImage(name: string | undefined): string {
     switch (name) {
       case 'Elf':
         return 'https://images.hdqwalls.com/wallpapers/bthumb/elf-azralith-fantasy-4k-ol.jpg';
@@ -37,7 +37,7 @@ export default function OneRaceCard(): JSX.Element {
     }
   }
 
-  const audioHandler = async (name: string): Promise<void> => {
+  const audioHandler = async (name: string | undefined): Promise<void> => {
     const audio1 = new Audio('https://vgmsite.com/soundtracks/baldurs-gate-ii-soundtrack-2010/hqeomgfrki/19%20-%20Mountain%20Battle%20II.mp3');
     const audio2 = new Audio(' https://vgmsite.com/soundtracks/baldurs-gate-ii-soundtrack-2010/tvdeaxygdl/10%20-%20Taverns.mp3');
     const audio3 = new Audio('https://vgmsite.com/soundtracks/baldurs-gate-ii-soundtrack-2010/vwtytumidm/24%20-%20The%20Druid%20Grove.mp3');
