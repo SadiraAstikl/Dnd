@@ -8,8 +8,6 @@ export default function Registr(): JSX.Element {
   const { index } = useParams();
   console.log(index)
 
-
-
   const [inputs, setInputs] = useState({ name: '', class: '', gender: '', biography: '' });
 
   const submitHandler = async (): Promise<void> => {
@@ -20,7 +18,6 @@ export default function Registr(): JSX.Element {
     }
   };
 
-
   const onChangeInputs = (event: any): void => {
     setInputs((prevState) => ({ ...prevState, [event.target.name]: event.target.value }))
   }
@@ -28,6 +25,11 @@ export default function Registr(): JSX.Element {
   const handleClick = (): void => {
     window.location.replace('/');
   };
+
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
 
     <Container style={{ width: "100vw", background: "black", borderRadius: "15px", alignContent: "center" }}>
@@ -55,6 +57,8 @@ export default function Registr(): JSX.Element {
               <option value="4">ЖРЕЦ</option>
               <option value="5">РЕЙНДЖЕР</option>
               <option value="6">ДРУИД</option>
+              <option value="7">ПАЛАДИН</option>
+              <option value="8">БАРД</option>
             </select>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -71,11 +75,12 @@ export default function Registr(): JSX.Element {
               БИОГРАФИЯ
             </label>
             <br />
-            <input name="biography" type="password" placeholder='Напишите о себе, ваше прошлое, ваше настоящее и куда вы стремитесь' className="form-control" id="passwordrepeatinput" onChange={onChangeInputs} value={inputs.biography} style={{ width: '400px', height: '50px', fontSize: '20px', background: '#f7e58b' }} />
+            <textarea name="biography" placeholder='Напишите о себе, ваше прошлое, ваше настоящее и куда вы стремитесь' className="form-control"  onChange={onChangeInputs} value={inputs.biography} style={{ width: '400px', minHeight: '50px', fontSize: '20px', background: '#f7e58b', resize: 'vertical' }}></textarea>
+
           </div>
           <br />
           <div style={{ textAlign: 'center', color: '#f7e58b' }}>
-            <button type="submit" style={{ alignContent: 'center', background: '#f7e58b' }} >
+            <button onClick={handlePrint}  style={{ alignContent: 'center', background: '#f7e58b' }} >
               НА ПОИСКИ ПРИКЛЮЧЕНИЙ!
             </button>
           </div>
@@ -84,5 +89,3 @@ export default function Registr(): JSX.Element {
     </Container>
   );
 }
-
-

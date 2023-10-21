@@ -4,13 +4,7 @@ import MainPage from './MainPage';
 import OneRaceCard from './OneRaceCard';
 import Registr from './Registr';
 
-
-
-
-
 function App(): JSX.Element {
-
-
 
   return (
     <Routes>

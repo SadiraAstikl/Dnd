@@ -112,26 +112,26 @@ export default function OneRaceCard(): JSX.Element {
 
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: 'black' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: 'black', marginTop: '100px', paddingTop: '200px'}}>
       <Card style={{ minWidth: '15rem', border: '2px solid darkred', borderRadius: '30px', backgroundColor: 'black' }}>
         <Card.Body>
           <Card.Title style={{ fontSize: '60px', color: '#f7e58b', textAlign: 'center', fontStyle: 'italic', marginTop: '300px' }}>{race?.name}</Card.Title>
-          <Card.Img variant="top" src={getRaceImage(race?.name)} style={{ width: '800px', borderRadius: '30px', marginLeft: '550px', border: '2px solid #f7e58b' }} />
+          <Card.Img variant="top" src={getRaceImage(race?.name)} style={{ width: '800px', borderRadius: '30px', marginLeft: '300px', border: '2px solid #f7e58b' }} />
+          <Button onClick={() => audioHandler(race?.name)}
+            style={{ color: '#f7e58b', background: 'linear-gradient(to right, brown, darkred, red, #d95923)', fontSize: '2rem', margin: '0 auto', display: 'block', fontStyle: 'italic', borderRadius: '50px', border: '1px solid white' }} >
+            МУЗЫКАЛЬНОЕ СОПРОВАЖДЕНИЕ
+          </Button>
           <Card.Text style={{ fontSize: '30px', color: '#f7e58b', textAlign: 'center', fontStyle: 'italic' }}>{race?.alignment}</Card.Text>
           <Card.Text style={{ fontSize: '30px', color: '#f7e58b', textAlign: 'center', fontStyle: 'italic' }}>{race?.age}</Card.Text>
           <Card.Text style={{ fontSize: '30px', color: '#f7e58b', textAlign: 'center', fontStyle: 'italic' }}>{race?.size_description}</Card.Text>
-          <Button onClick={() => audioHandler(race?.name)}
-            style={{ color: '#f7e58b', background: 'linear-gradient(to right, brown, darkred, red, #d95923)', fontSize: '2rem', margin: '0 auto', display: 'block', width: '300px', fontStyle: 'italic', borderRadius: '50px', border: '1px solid white' }} >
 
-            НАЖАТЬ
-          </Button>
           <br />
           <Button style={{ color: '#f7e58b', background: 'linear-gradient(to left, brown, darkred, red, #d95923)', fontSize: '2rem', margin: '0 auto', display: 'block', width: '300px', fontStyle: 'italic', borderRadius: '50px', border: '1px solid white' }} variant="danger" onClick={() => handleRegClick()}>
             ВЫБРАТЬ
           </Button>
           <br />
           <Button style={{ color: '#f7e58b', background: 'linear-gradient(to left, brown, darkred, red, #d95923)', fontSize: '2rem', margin: '0 auto', display: 'block', width: '300px', fontStyle: 'italic', borderRadius: '50px', border: '1px solid white' }} variant="danger" onClick={() => handleBack()}>
-            ЗАКРЫТЬ
+            НАЗАД
           </Button>
         </Card.Body>
       </Card>

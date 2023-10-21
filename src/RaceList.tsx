@@ -14,10 +14,11 @@ export default function RaceList({ races, deleteHandler }: RaceListProps): JSX.E
   return (
     <Row style={{ background: 'black' }}>
       {races?.map((race) => (
-        <Col key={race.id}>
+        <Col key={race.id} style={{ margin: '20px' }}>
           <RaceCard race={race} deleteHandler={deleteHandler} />
         </Col>
       ))}
     </Row>
   );
+  
 }

@@ -25,7 +25,7 @@ export default function RaceCard({ race, deleteHandler }: RaceProps): JSX.Elemen
       case 'Human':
         return 'https://tabletopden.com/wp-content/uploads/2023/06/Half-elf-Rogue.png';
       case 'Dragonborn':
-        return 'https://i.redd.it/xgyv45ff4l771.jpg';
+        return 'https://www.dndbeyond.com/attachments/9/41/chromatic-dragonborn.jpg';
       case 'Half-Elf':
         return 'https://storage.prompt-hunt.workers.dev/clgy1d89j0016jl089g8a3y3k_1';
       case 'Half-Orc':
@@ -53,7 +53,7 @@ export default function RaceCard({ race, deleteHandler }: RaceProps): JSX.Elemen
 
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Card style={{ minWidth: '15rem', border: '2px solid  #f7e58b', borderRadius: '30px' }}>
         <Card.Body>
           <Card.Title style={{ fontSize: '60px', color: '#f7e58b', textAlign: 'center', fontStyle: 'italic' }}>{race.name}</Card.Title>
